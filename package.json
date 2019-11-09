@@ -1,0 +1,41 @@
+{
+  "name": "full-stack-framework",
+  "version": "1.0.0",
+  "description": "sample file",
+  "author": "Forest",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack -w",
+    "start": "nodemon server/index.js",
+    "seed-mongo": "node db/mongo/seed.js",
+    "import-mongo": "mongoimport --db SDChub --collection grubhubs --file db/mongo/importer.json",
+    "seed-ps": "node db/postgres/seed.js",
+    "import-ps": "psql restaurant -f db/postgres/schema.sql",
+    "test": "",
+    "spam": "artillery run server/spam.yml"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "mysql": "^2.17.1",
+    "pg": "^7.12.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "artillery": "^1.6.0-29",
+    "babel-loader": "^8.0.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.9"
+  }
+}
