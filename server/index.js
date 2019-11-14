@@ -18,6 +18,9 @@ app.get("/server/test", (req, res) => {
   console.log("visited");
   res.status(200).send(":" + port + " is watching you");
 });
+app.get("/loaderio-1b50b35c25f637cebc3dc4511dd8006d",(req,res)=>{
+  res.status(200).send();
+});
 
 app.use("/sdc/mongo", mongoCtrl);
 // app.use("/sdc/postgres",postgresCtrl);
