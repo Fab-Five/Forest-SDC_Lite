@@ -14,10 +14,10 @@ app.listen(port, () => {
   console.log("lite server online:" + port);
 });
 
-// app.get("/server/test", (req, res) => {
-//   console.log("visited");
-//   res.status(200).send(":" + port + " is watching you");
-// });
+app.get("/server/test", (req, res) => {
+  console.log("visited");
+  res.status(200).send(":" + port + " is watching you");
+});
 
 app.use("/sdc/mongo", mongoCtrl);
 app.use("/sdc/postgres",postgresCtrl);
