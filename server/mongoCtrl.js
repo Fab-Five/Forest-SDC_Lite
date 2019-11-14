@@ -27,5 +27,12 @@ router.get('/artillery',(req, res) => {
     res.status(200).send(data);
   });
 });
+router.get('/loaderio',(req, res) => {
+  var id=Math.floor(Math.random()*10000000);
+  model.findOne({id:id},(err,data)=>{
+    if(err)res.status(400).send(err);
+    res.status(200).send(data);
+  });
+});
 
 module.exports=router;
