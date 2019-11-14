@@ -4,7 +4,7 @@ const path = require("path");
 const port = 3000;
 // const mysqlCtrl = require("./mysqlCtrl");
 const mongoCtrl = require("./mongoCtrl");
-const postgresCtrl = require("./postgresCtrl");
+// const postgresCtrl = require("./postgresCtrl");
 
 const app = express();
 app.use(bParser.json());
@@ -20,4 +20,4 @@ app.get("/server/test", (req, res) => {
 });
 
 app.use("/sdc/mongo", mongoCtrl);
-app.use("/sdc/postgres",postgresCtrl);
+// app.use("/sdc/postgres",postgresCtrl);
