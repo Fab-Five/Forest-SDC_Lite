@@ -19,7 +19,7 @@ app.get("/server/test", (req, res) => {
   res.status(200).send(":" + port + " is watching you");
 });
 app.get("/loaderio-1b50b35c25f637cebc3dc4511dd8006d",(req,res)=>{
-  res.status(200).send();
+  res.status(200).send("loaderio-1b50b35c25f637cebc3dc4511dd8006d");
 });
 
 app.use("/sdc/mongo", mongoCtrl);
