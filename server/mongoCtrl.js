@@ -21,15 +21,15 @@ router.get('/sponsored/:id',(req, res) => {
 });
 
 router.get('/artillery',(req, res) => {
-  var id=Math.floor(Math.random()*10000000);
+  var id=Math.floor(Math.random()*10000000)+1;
   model.findOne({id:id},(err,data)=>{
     if(err)res.status(400).send(err);
     res.status(200).send(data);
   });
 });
 router.get('/loaderio',(req, res) => {
-  var id=Math.floor(Math.random()*10000000);
-  model.findOne({id:id},(err,data)=>{
+  var id=Math.floor(Math.random()*10000000)+1;
+  model.find({id:id},(err,data)=>{
     if(err)res.status(400).send(err);
     res.status(200).send(data);
   });

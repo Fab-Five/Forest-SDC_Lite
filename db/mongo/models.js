@@ -41,7 +41,6 @@ const GrubhubSchema = new mongoose.Schema({
 		}
 	}
 })
-GrubhubSchema.index({id:1});
 
 const Grubhub = mongoose.model('Grubhub', GrubhubSchema);
 module.exports = Grubhub;
