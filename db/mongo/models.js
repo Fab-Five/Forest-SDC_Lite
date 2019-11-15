@@ -40,7 +40,7 @@ const GrubhubSchema = new mongoose.Schema({
 			return seed[Math.floor(Math.random() * 5)] //from 0 to 4
 		}
 	}
-})
+},{collection:"Grubhub"});
 
 const Grubhub = mongoose.model('Grubhub', GrubhubSchema);
 module.exports = Grubhub;
